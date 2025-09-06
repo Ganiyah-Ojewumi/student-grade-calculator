@@ -42,7 +42,6 @@ button{
     font-size: 15px;
     margin-top: 30px;
     width: 50%;
-    margin-left: 100px;
     border-radius: 5px;
     color: white;
     font-weight: bold;
@@ -53,4 +52,5 @@ button{
     margin-top: 25px;
     margin-bottom: 2px;
 }
+
 
