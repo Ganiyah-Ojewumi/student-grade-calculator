@@ -23,7 +23,6 @@ p{
 }
 input{
     height: 30px;
-    width: 250px;
     border-color: rgb(245, 238, 238);
     border: 1px;
     border-radius: 4px;
@@ -33,16 +32,9 @@ input{
 form{
     line-height: 40px;
     font-size: 23px;
-}
-.field2,
-.field3{
-    margin-right: 49px;
-}
-.field4{
-    margin-right: 23px;
-}
-.field5{
-    margin-right: 44px;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    align-items: center;
 }
 button{
     border: none;
@@ -61,3 +53,4 @@ button{
     margin-top: 25px;
     margin-bottom: 2px;
 }
+
