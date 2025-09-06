@@ -1,0 +1,63 @@
+body{
+    display: flex;
+    justify-content: center;
+    padding-top: 8%;
+    background-color: rgb(255, 248, 252)
+}
+h1{
+    margin-bottom: 0;
+}
+p{
+    margin: 0;
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
+.container{
+    background-color: rgb(252, 215, 255);
+    height: auto;
+    width: auto;
+    border-radius: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+}
+input{
+    height: 30px;
+    width: 250px;
+    border-color: rgb(245, 238, 238);
+    border: 1px;
+    border-radius: 4px;
+    background-color: rgb(253, 253, 253);
+    padding-left: 10px;
+}
+form{
+    line-height: 40px;
+    font-size: 23px;
+}
+.field2,
+.field3{
+    margin-right: 49px;
+}
+.field4{
+    margin-right: 23px;
+}
+.field5{
+    margin-right: 44px;
+}
+button{
+    border: none;
+    background-color: rgb(114, 7, 114);
+    font-size: 15px;
+    margin-top: 30px;
+    width: 50%;
+    margin-left: 100px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.report{
+    margin-top: 25px;
+    margin-bottom: 2px;
+}

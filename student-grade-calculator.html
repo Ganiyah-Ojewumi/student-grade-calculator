@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="student-grade-calculator.css">
+</head>
+<body>
+    <div class="container">
+        <center><h1>Student Grade Calculator</h1>
+        <p>Enter your subjects scores to calculate your overall grade.</p></center>
+        
+        <form onsubmit="calculateGrade()">
+            <div>
+                <label for = "mathematics">Mathematics: </label>
+                <input type ="number" id = "maths" placeholder="Enter score">
+            </div>
+
+            <div>
+                <label for = "english" class="field2">English: </label>
+                <input type ="number" id = "eng" placeholder="Enter score">
+            </div>
+
+            <div>
+                <label for = "physics" class="field3">Physics: </label>
+                <input type ="number" id = "phy" placeholder="Enter score"> 
+            </div>
+
+            <div>
+                <label for = "chemistry" class="field4">Chemistry: </label>
+                <input type ="number" id = "chem" placeholder="Enter score">
+            </div>
+
+            <div>
+                <label for = "biology" class="field5">Biology: </label>
+                <input type ="number" id = "bio" placeholder="Enter score">
+            </div>
+        </form>
+        <button onclick="
+            calculateGrade();
+        ">Calculate my grade</button>
+        <center><p class="js-report report"></p></center>
+    </div>
+    <script>
+        function calculateGrade(){
+
+            let maths = Number(document.getElementById("maths").value);
+
+            let eng = Number(document.getElementById("eng").value);
+
+            let phy = Number(document.getElementById("phy").value);
+
+            let chem = Number(document.getElementById("chem").value);
+
+            let bio = Number(document.getElementById("bio").value);
+
+            total = maths + eng + phy + chem + bio;
+    
+            let figure = (total / 500) * 100;
+            let percentage =figure.toFixed(1);
+
+            let scores = [maths, eng, phy, chem, bio];
+
+            if(scores.some(score => score < 0 || score > 100)){
+                console.log('Please enter scores between 0 and 100')
+
+                alert('Please enter scores between 0 and 100')
+            } else{
+                if(percentage >= 70){
+                grade = 'A';
+                } else if (percentage >= 60 && percentage < 70){
+                    grade = 'B';
+                } else if(percentage >= 55 && percentage < 60){
+                    grade = 'C';
+                } else if (percentage >= 50 && percentage < 55){
+                    grade = 'D';
+                } else if (percentage >= 40 && percentage < 50){
+                    grade = 'E';
+                } else{
+                    grade = 'F';
+                }
+
+                document.querySelector('.js-report')
+                .innerHTML = `You have a percentage of ${percentage}% and your grade is ${grade}`
+                console.log('-----Grade Report-----')
+                console.log(`Mathematics: ${maths}`)
+                console.log(`English: ${eng}`)
+                console.log(`Physics: ${phy}`)
+                console.log(`Chemistry: ${chem}`)
+                console.log(`Biology: ${bio}`)
+                console.log('-----------------------')
+                console.log('Total Subjects: 5')
+                console.log(`Average Score: ${percentage}%`)
+                console.log(`Final Grade: ${grade}`)
+                console.log('-----------------------')
+            }
+            
+        }
+    </script>
+</body>
+</html>
