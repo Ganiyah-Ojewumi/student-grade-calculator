@@ -35,26 +35,36 @@
     <script>
         function calculateGrade(){
 
-            let maths = Number(document.getElementById("maths").value);
+            let maths = document.getElementById("maths").value;
 
-            let eng = Number(document.getElementById("eng").value);
+            let eng = document.getElementById("eng").value;
 
-            let phy = Number(document.getElementById("phy").value);
+            let phy = document.getElementById("phy").value;
 
-            let chem = Number(document.getElementById("chem").value);
+            let chem = document.getElementById("chem").value;
 
-            let bio = Number(document.getElementById("bio").value);
+            let bio = document.getElementById("bio").value;
 
             total = maths + eng + phy + chem + bio;
     
             let figure = (total / 500) * 100;
             let percentage =figure.toFixed(1);
-
             let scores = [maths, eng, phy, chem, bio];
+
+            if(scores.some(score => score === '')) {
+                console.log('Please enter all scores')
+                alert('Please enter all scores')
+                return;
+            }
+            
+            maths= Number(maths);
+            eng= Number(eng);
+            phy= Number(phy);
+            chem= Number(chem);
+            bio= Number(bio);
 
             if(scores.some(score => score < 0 || score > 100)){
                 console.log('Please enter scores between 0 and 100')
-
                 alert('Please enter scores between 0 and 100')
             } else{
                 if(percentage >= 70){
@@ -91,6 +101,7 @@
 </body>
 
 </html>
+
 
 
 
